@@ -1,0 +1,5 @@
+---
+- hosts: tiruwind1
+  roles:
+    - sql-ssms
+

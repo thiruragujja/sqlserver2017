@@ -1,0 +1,15 @@
+---
+# tasks file for sql-ssms
+
+- name: Create directory structure
+  win_file:
+    path: C:\Scripts
+    state: directory
+
+- name: Copy a single file
+  win_copy:
+    src: Install_SQL_Server_2017.ps1
+    dest: C:\Scripts\
+
+- name: Executing Power shell script
+  win_shell: 'C:\Scripts\Install_SQL_Server_2017.ps1'
